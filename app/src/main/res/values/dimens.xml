@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- 投注确认界面 -->
+    <dimen name="bet_btn_width">@dimen/lt_59_dip</dimen>
+    <dimen name="bet_btn_height">@dimen/lt_35_dip</dimen>
+
+    
+    <dimen name="dialog_btn_width">@dimen/lt_100_dip</dimen>
+    <!-- 合买界面 -->
+    <dimen name="hemai_total_money_height">27.0dip</dimen>
+    <dimen name="hemai_top_panel_margin">10.0dip</dimen>
+    <dimen name="hemai_left_key_margin">8.0dip</dimen>
+ 
+    <!-- 双色球选号 -->
+    <dimen name="text_size_480_18px">@dimen/lt_12_dip</dimen>
+    <dimen name="text_size_480_16px">@dimen/lt_11_dip</dimen>
+    
+    <dimen name="ball_view_rate_height">16.0dip</dimen>
+    
+    <dimen name="text_size_16sp">@dimen/lt_16_dip</dimen>
+    <dimen name="title_middle_text_size">@dimen/lt_20_dip</dimen>
+    <dimen name="clear_text_size">@dimen/lt_15_dip</dimen>
+    <dimen name="bottom_height_dimen">@dimen/lt_48_dip</dimen>
+    <dimen name="btn_small_width_dimen">@dimen/lt_60_dip</dimen>
+    <dimen name="text_size_normal">@dimen/lt_14_dip</dimen>
+
+    <!-- BaseActivity -->
+    <dimen name="base_title_height">@dimen/lt_48_dip</dimen>
+    <dimen name="onedip_height">2dip</dimen>
+    <dimen name="cell_border_width">1.0px</dimen>
+
+     <dimen name="k3_bet_topInfo_textSize">@dimen/lt_10_dip</dimen>
+     
+     <dimen name="text_size_small">@dimen/lt_12_dip</dimen>
+     <dimen name="text_size_medium">14.0sp</dimen>
+     <dimen name="text_size_large">@dimen/lt_16_dip</dimen>
+     
+     
+     <dimen name="prize_level_item_height">30.0dip</dimen>
+     
+     <dimen name="header_height">@dimen/lt_60_dip</dimen>
+    <dimen name="footer_height">@dimen/lt_90_dip</dimen>
+    <dimen name="footer_padding">@dimen/lt_10_dip</dimen>
+     
+</resources>

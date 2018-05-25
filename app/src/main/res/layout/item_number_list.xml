@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/lt_46_dip"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+          android:id="@+id/content"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical" 
+            android:padding="@dimen/lt_10_dip">
+
+            <TextView
+              android:id="@+id/numbers"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="123"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size_medium" />
+        </LinearLayout>
+
+        <ImageView
+          android:id="@+id/iv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/lt_10_dip"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_edit_bet_number_item" />
+        
+        <ImageView
+          android:id="@+id/delete_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_delete_bet_number_item" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/betway_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:paddingLeft="@dimen/lt_10_dip">
+
+        <TextView
+          android:id="@+id/betway"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1234567"
+            android:textColor="@color/c_gray"
+            android:textSize="@dimen/lt_10_dip" 
+            />
+
+        <TextView
+          android:id="@+id/bet_times"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:gravity="right"
+            android:text="1234567"
+            android:textColor="@color/black"
+            android:textSize="@dimen/lt_10_dip" />
+    </LinearLayout>
+
+    <View
+      android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="3.0dip"
+        android:background="@drawable/dash_line_fgray"
+        android:layerType="software" 
+        android:layout_marginTop="@dimen/lt_5_dip"/>
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_number_award_title" />
+ 
+    <ViewStub
+        android:id="@+id/vs_gaopin_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/layout_gaopin_award_title" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                   android:id="@+id/hint_panel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                       android:id="@+id/choose_hint"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_weight="1.0"
+                        android:visibility="gone" />
+
+                    <TextView
+                       android:id="@+id/hint2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8.0dip"
+                        android:drawableLeft="@drawable/shake_icon"
+                        android:drawablePadding="4.0dip"
+                        android:text="摇一摇机选"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                   android:id="@+id/tv_extra_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:layout_marginRight="8.0dip"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                   android:id="@+id/bet_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </ScrollView>
+
+
+    </FrameLayout>
+
+    <include layout="@layout/layout_number_bottom_menu" />
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ProgressButton" />
+
+    <style name="ProgressButton.attrs">
+        <item name="defaultBackgroundColor">@drawable/btn_color_red</item>
+        <item name="android:clickable">false</item>
+        <item name="android:focusable">false</item>
+        <item name="defaultFontSize">54</item>
+        <item name="defaultFontColor">@color/white</item>
+        <item name="defaultText">自购</item>
+    </style>
+
+    <style name="bet_ok_top_btn_style" parent="android:Widget.Button">
+        <item name="android:layout_width">@dimen/lt_95_dip</item>
+        <item name="android:layout_height">@dimen/lt_27_dip</item>
+        <item name="android:background">@drawable/selector_rect_bg_red_black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/selector_text_color_red_black</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="text_black_medium_style" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="style_text_keyboard" parent="android:Widget.Holo.TextView">
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/selector_keyboard_bg</item>
+        <item name="android:textColor">@color/a_gray</item>
+        <item name="android:textSize">@dimen/lt_24_dip</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="style_dgray_line_vertical">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/d_gray</item>
+    </style>
+    <style name="style_dgray_line_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/d_gray</item>
+    </style>
+</resources>

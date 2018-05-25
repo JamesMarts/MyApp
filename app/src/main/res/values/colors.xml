@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="f_gray">#e7e7e7</color>
+    <color name="d_gray">#d2d2d2</color>
+    <color name="color_register_pressed">#7fccec</color>
+    <color name="color_login_normal">#e60126</color>
+    <color name="color_login_pressed">#f28092</color>
+    <color name="color_gray_line">#dbdbdb</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="dark_grey">#7b7b7b</color>
+    <color name="french_grey">#b6b6b6</color>
+    <color name="orange">#ff4301</color>
+    <color name="transparent">#00ff00ff</color>
+    <color name="bg_common">#FFFFFFFF</color>
+
+    <color name="e_gray">#efefef</color>
+
+    <color name="a_yellow">#d6ae5a</color>
+    <color name="b_yellow">#fffdf8</color>
+    <color name="c_yellow">#f2d69d</color>
+    <color name="a_red">#c1001f</color>
+    <color name="b_red">#ff0029</color>
+    <color name="g_gray">#fff9fa</color>
+    <color name="c_red">#c1001f</color>
+    <color name="h_gray">#696969</color>
+    <color name="a_orange">#d78900</color>
+    <color name="g_red">#fce7eb</color>
+    <color name="a_gray">#484848</color>
+    <color name="red">#ffb00f0f</color>
+    <color name="c_gray">#888888</color>
+
+</resources>

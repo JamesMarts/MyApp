@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    tools:context=".MainActivity">
+
+    <EditText 
+        android:id="@+id/et_focus"
+         android:layout_width="0.0dip"
+    android:layout_height="0.0dip"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/bet_btns_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3.0dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/add_random_bet"
+                style="@style/bet_ok_top_btn_style"
+                android:text="机选一注" />
+
+            <Button
+                android:id="@+id/add_random5_bet"
+                style="@style/bet_ok_top_btn_style"
+                android:layout_marginLeft="@dimen/lt_5_dip"
+                android:layout_marginRight="@dimen/lt_5_dip"
+                android:text="机选五注" />
+
+            <Button
+                android:id="@+id/add_bet"
+                style="@style/bet_ok_top_btn_style"
+                android:text="自选一注" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView 
+        android:id="@+id/iv_no_data_shake"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:src="@drawable/icon_shake_no_data"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/lt_20_dip"
+        />
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1" >
+
+        <ListView
+            android:id="@+id/betting_list"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:background="@color/transparent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:headerDividersEnabled="true"
+            android:layoutAnimation="@anim/animationlayout"
+            android:listSelector="@color/transparent"
+            android:paddingLeft="@dimen/lt_13_dip"
+            android:paddingRight="@dimen/lt_13_dip"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_root"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/e_gray"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5.0dip" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/follow_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="2.0dip"
+                    android:visibility="visible" >
+
+                    <TextView
+                        style="@style/text_black_medium_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2.0dip"
+                        android:text="追" />
+
+                    <EditText
+                        android:id="@+id/follow_periods"
+                        style="@style/text_black_medium_style"
+                        android:layout_width="50.0dip"
+                        android:layout_height="27.0dip"
+                        android:background="@drawable/rect_dgray_solid"
+                        android:cursorVisible="false"
+                        android:ellipsize="middle"
+                        android:gravity="center"
+                        android:maxEms="4"
+                        android:maxLength="4"
+                        android:numeric="integer"
+                        android:singleLine="true"
+                        android:text="1"
+                        android:textColor="@color/b_red"
+                        android:textColorHint="#ffff8000" />
+
+                    <TextView
+                        android:id="@+id/tv_follow_2"
+                        style="@style/text_black_medium_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:text="@string/period" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/normal_bet_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="2.0dip" >
+
+                    <TextView
+                        style="@style/text_black_medium_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2.0dip"
+                        android:text="投" />
+
+                    <EditText
+                        android:id="@+id/bet_times"
+                        style="@style/text_black_medium_style"
+                        android:layout_width="50.0dip"
+                        android:layout_height="27.0dip"
+                        android:background="@drawable/rect_dgray_solid"
+                        android:cursorVisible="false"
+                        android:ellipsize="middle"
+                        android:gravity="center"
+                        android:maxEms="4"
+                        android:maxLength="4"
+                        android:numeric="integer"
+                        android:singleLine="true"
+                        android:text="1"
+                        android:textColor="@color/b_red"
+                        android:textColorHint="#ffff8000" />
+
+                    <Button
+                        android:id="@+id/kl8_bet_times"
+                        android:layout_width="60.0dip"
+                        android:layout_height="25.0dip"
+                        android:background="@drawable/rect_dgray"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="#ff795425"
+                        android:visibility="gone" />
+
+                    <TextView
+                        style="@style/text_black_medium_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2.0dip"
+                        android:text="@string/times" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bt_zhuihaoshezhi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32.0dip"
+                    android:layout_gravity="right"
+                    android:background="@drawable/btn_gray_bg"
+                    android:text="盈利追号"
+                    android:textColor="#ffff8000"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/clearance"
+                    android:layout_width="0.0dip"
+                    android:layout_height="28.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/btn_dan"
+                    android:ellipsize="middle"
+                    android:gravity="center"
+                    android:paddingLeft="10.0dip"
+                    android:singleLine="true"
+                    android:text="@string/clearance_choice"
+                    android:textColor="@color/colorPrimary"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/setting_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="2.0dip"
+                android:paddingLeft="7.0dip"
+                android:paddingRight="7.0dip"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/append_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:visibility="invisible" >
+
+                    <CheckBox
+                        android:id="@+id/append_bet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32.0dip"
+                        android:text="追加"
+                        android:textColor="@color/color_register_pressed"
+                        android:textSize="14.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/frisbee_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <CheckBox
+                        android:id="@+id/frisbee_bet"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="快乐飞盘(支持任选一至任选七)"
+                        android:textSize="14.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/append_stop_zui"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:visibility="gone" >
+
+                    <CheckBox
+                        android:id="@+id/follow_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32.0dip"
+                        android:text="跟单"
+                        android:textSize="14.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/a_red"
+            android:orientation="vertical"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/bottom_height_dimen"
+            android:background="@color/black"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/clear"
+                    android:layout_width="@dimen/bet_btn_width"
+                    android:layout_height="@dimen/bet_btn_height"
+                    android:layout_marginLeft="@dimen/lt_13_dip"
+                    android:background="@drawable/btn_color_yellow"
+                    android:text="清空"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/linearLayout2"
+                android:layout_toRightOf="@id/linearLayout1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/total_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="@color/a_yellow"
+                        android:textSize="@dimen/text_size_medium"
+                        android:typeface="serif" 
+                        android:text=""/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="元"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_medium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/info_zhu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/a_yellow"
+                        android:textSize="@dimen/lt_10_dip"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="注"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/lt_10_dip" />
+
+                    <TextView
+                        android:id="@+id/info_bei"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/a_yellow"
+                        android:textSize="@dimen/lt_10_dip"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="倍"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/lt_10_dip" />
+
+                    <TextView
+                        android:id="@+id/info_qi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/a_yellow"
+                        android:textSize="@dimen/lt_10_dip"
+                        android:typeface="serif" 
+                        android:text=""/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="期"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/lt_10_dip" />
+
+                    <TextView
+                        android:id="@+id/info_zhuijia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/a_yellow"
+                        android:textSize="@dimen/lt_10_dip"
+                        android:typeface="serif" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <com.example.lijuw.myapp.ProgressButton
+                    android:id="@+id/pay"
+                    android:layout_width="@dimen/bet_btn_width"
+                    android:layout_height="@dimen/bet_btn_height"
+                    android:layout_marginRight="@dimen/lt_13_dip"
+                    android:background="@drawable/btn_color_red"
+                    android:text="自购"
+                    android:src="@drawable/progress_view"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_large" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
